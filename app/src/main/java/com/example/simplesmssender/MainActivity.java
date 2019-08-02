@@ -10,6 +10,7 @@ import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             String number = phnNumber.getText().toString();
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(number, null, message, null, null);
+            Toast.makeText(MainActivity.this, "SMS Sent Successfully", Toast.LENGTH_SHORT).show();
         }
 
     }
